@@ -1,0 +1,11 @@
+name: DynmapChatControl
+version: ${project.version}
+main: com.bilicraft.dynmapchatcontrol.DynmapChatControl
+api-version: 1.17
+description: 允许管理员屏蔽指定IP在Dynmap的发言
+depend:
+  - dynmap
+commands:
+  dwebchat:
+    description: dynmap地图web聊天控制
+    usage: /dwebchat <mute/unmute>
