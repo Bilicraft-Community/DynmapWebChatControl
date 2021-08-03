@@ -30,8 +30,10 @@ public final class DynmapChatControl extends JavaPlugin implements Listener {
 
     @EventHandler(ignoreCancelled = true)
     public void dynmapChat(DynmapWebChatEvent event){
-        if(blockedSource.contains(event.getName())){
-            event.setCancelled(true);
+        for (String s : blockedSource) {
+            if(event.getName().equals(s) || event.getName().contains(s) || event.getName().startsWith(s) || event.getName().matches(s)){
+                event.setCancelled(true);
+            }
         }
     }
 
